@@ -1,7 +1,73 @@
 # Go标准库
 
 ---
++ `unsafe`
++ `syscall`-`os`-`os/exec`
+  + `os`
+  + `os/exec`
+  + `syscall`
++ `archive/tar`-`/zip-compress`
++ `fmt`-`io`-`bufio`-`path/filepath`-`flag`
+  + `fmt`
+  + `io`
+  + `path/filepath`
+  + `flag`
+  + `bufio`
++ `strings`-`strconv`-`unicode`-`regexp`-`bytes`
+  + `regexp`
+  + `strconv`
+  + `strings`
+  + `unicode`
+  + `bytes`
++ `math`-`math/cmath`-`math/big`-`math/rand`-`sort`
+  + `math`
+  + `math/rand`
+  + `math/big`
+  + `sort`
++ `container`-`/list-ring-heap`
+  + `list-ring-heap`
+  + `container`
++ `time`-`log`
+  + `log`
+  + `time`
++ `encoding/json`-`encoding/xml`-`text/template`
+  + `encoding/json`
+  + `encoding/xml`
+  + `text/template`
++ `net`-`net/http`-`html`
+  + `net`
+  + `http`
+  + `html`
++ `runtime`-`sync`
++ `reflect`
+
+
+
+## unsafe
+
+---
+包含一些打破Go语言“类型安全”的命令，一般的程序不需要使用，可用在C/C++程序的调用中
+
+## syscall
+
+---
+底层的外部包，提供了操作系统底层调用的基本接口
+
+## os
+
+---
+提供了一个平台无关性的操作系统功能接口，采用Unix设计
+
+
+## os/exec
+
+---
+提供我们运行外部操作系统命令和程序的方法
+
 ## strings
+
+---
+
 Go中使用`strings`包来完成对字符串的主要操作
 + `HasPrefix`判断字符串`s`是否以`prefix`开头：
     ```text
@@ -81,7 +147,12 @@ Go中使用`strings`包来完成对字符串的主要操作
 
 ## strconv
 
-## time 
+---
+
+## time
+
+---
+
 `time.Time`
 
 `time.Now()` // `t.Day()` `t.Minute()` `t.Year()`
@@ -91,4 +162,9 @@ Go中使用`strings`包来完成对字符串的主要操作
 `time.Ticker`
 
 `time.Sleep(d Duration)`
+
+## bytes
+
+---
+Go语言中bytes包专门用来解决`[]bytes`切片的操作方法，它与`strings`包十分类似
 
