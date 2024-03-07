@@ -1,0 +1,12 @@
+syntax = "proto3";
+package gen;
+option go_package="./gen";
+
+message World {
+  string value = 1;
+}
+
+service HelloService {
+  rpc Hello (World) returns (World);
+  rpc Channel (stream World) returns (stream World);
+}
